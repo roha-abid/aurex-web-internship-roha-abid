@@ -5,7 +5,7 @@
 
 ## Live Deployment
 
-🔗 **Live URL:** _add your GitHub Pages or Vercel link here after deploying_
+🔗 **Live URL:** _https://roha-abid.github.io/aurex-web-internship-roha-abid/_
 
 ## About This Project
 
