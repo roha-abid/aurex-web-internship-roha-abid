@@ -40,8 +40,8 @@ aurex-web-internship-roha-abid/
 
 ## Submission Checklist
 
-- [ ] Push this repo to GitHub
-- [ ] Deploy live via GitHub Pages or Vercel
-- [ ] Add the live URL to this README
-- [ ] Take 3 screenshots: Desktop, Tablet, Mobile
-- [ ] Submit repo link + live link + screenshots + reflection by Saturday midnight
+- [x] Push this repo to GitHub
+- [x] Deploy live via GitHub Pages or Vercel
+- [x] Add the live URL to this README
+- [x] Take 3 screenshots: Desktop, Tablet, Mobile
+- [x] Submit repo link + live link + screenshots + reflection by Saturday midnight
