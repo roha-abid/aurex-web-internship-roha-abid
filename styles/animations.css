@@ -1,0 +1,42 @@
+/* ---- Card hover elevation ---- */
+.project-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(16, 32, 43, 0.15);
+}
+
+/* ---- Button scale effect ---- */
+.contact-form button {
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.04);
+}
+
+.contact-form button:active {
+  transform: scale(0.97);
+}
+
+/* ---- Fade-in animation on page load ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeIn 0.7s ease forwards;
+}

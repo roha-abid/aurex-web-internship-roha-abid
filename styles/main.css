@@ -83,7 +83,7 @@ h3 {
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
   margin-bottom: 1.75rem;
   position: relative;
   display: inline-block;
@@ -299,7 +299,7 @@ p {
 /* ---- Projects (Grid) ---- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.75rem;
 }
 
