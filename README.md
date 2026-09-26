@@ -4,7 +4,7 @@
 **Domain:** Full-Stack Engineering — Frontend Foundation
 **Week:** 4
 
-**Live Deployment Link:** [Add your GitHub Pages / Vercel link here]
+**Live Deployment Link:** https://roha-abid.github.io/aurex-web-internship-roha-abid/
 
 ## Technologies Used
 
