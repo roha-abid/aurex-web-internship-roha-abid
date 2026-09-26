@@ -26,7 +26,11 @@
 
 ## Challenges Faced & What I Learned
 
-[Add 2-4 sentences here — e.g. handling inline editing without losing state, structuring localStorage read/write, or debugging event listeners on dynamically created elements.]
+One of the trickier parts was inline editing when you click "Edit," the task text turns into an input field without losing the task's ID or its completed/uncompleted state. I learned that saving to localStorage and re-rendering the list have to stay tightly connected, or edits get overwritten on the next render.
+
+I also ran into the issue of attaching event listeners to elements that don't exist yet when the page first loads (tasks created dynamically). I learned that listeners need to be added each time a task element is built, rather than once when the page loads otherwise clicks on new tasks do nothing.
+
+Working with JSON.stringify() and JSON.parse() for localStorage also clarified the difference between an in-memory JavaScript array and the string format required to persist that data across page refreshes.
 
 ## Completed JavaScript Exercises
 
