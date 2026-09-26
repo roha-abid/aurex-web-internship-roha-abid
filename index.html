@@ -1,325 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roha Abid | IT Student & Developer Profile</title>
-    <meta
-      name="description"
-      content="Roha Abid — BS Information Technology student and aspiring full-stack developer. Portfolio of projects, skills, and contact details."
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger — Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
-      rel="stylesheet"
-    />
+  <div class="page">
 
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/animations.css" />
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="brand">
-          <h1>Roha Abid</h1>
-          <p class="role">
-            Information Technology Student · Aspiring IT Intern
-          </p>
-        </div>
-
-        <nav class="site-nav">
-          <button
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            aria-label="Toggle navigation menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
-          <ul id="primary-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header class="app-header">
+      <h1>Ledger</h1>
+      <p class="app-sub">A running list of what needs doing.</p>
     </header>
 
-    <main>
-      <section id="about" class="section about-section">
-        <div class="about-grid">
-          <figure class="profile-figure">
-            <img
-              src="profile.png"
-              alt="Roha Abid profile picture"
-              width="200"
-            />
-          </figure>
+    <form id="task-form" class="task-form" novalidate>
+      <div class="field-row">
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="What needs to get done?"
+          maxlength="120"
+          autocomplete="off"
+        >
+        <button type="submit" class="btn btn-add">Add task</button>
+      </div>
+      <p id="form-error" class="form-error" role="alert" aria-live="polite"></p>
+    </form>
 
-          <div class="about-copy">
-            <h2>About Me</h2>
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="filter-btn is-active" data-filter="all">All <span id="count-all" class="count">0</span></button>
+      <button class="filter-btn" data-filter="active">Active <span id="count-active" class="count">0</span></button>
+      <button class="filter-btn" data-filter="completed">Done <span id="count-completed" class="count">0</span></button>
+    </nav>
 
-            <p>
-              Hello! My name is Roha Abid. I am a detail-oriented Information
-              Technology undergraduate (8th semester, BS IT) with hands-on
-              academic exposure to web development, database management, and
-              version control.
-            </p>
+    <ul id="task-list" class="task-list"></ul>
 
-            <p>
-              I am skilled in HTML, CSS, JavaScript, SQL, and Git/GitHub, with a
-              strong foundation in problem-solving. I am seeking an entry-level
-              IT internship to apply my technical knowledge, contribute to
-              real-world projects, and grow within a collaborative, fast-paced
-              technology environment.
-            </p>
+    <p id="empty-state" class="empty-state">Nothing here yet. Add your first task above.</p>
 
-            <span class="meta-tag">BS IT — 8th Semester</span>
-          </div>
-        </div>
-      </section>
+  </div>
 
-      <section id="skills" class="section skills-section">
-        <h2>Skills</h2>
-
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Programming &amp; Web</h3>
-            <ul class="tag-list">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript (basic)</li>
-              <li>React.js</li>
-              <li>Next.js</li>
-              <li>Tailwind CSS</li>
-              <li>Python (basic)</li>
-              <li>Programming Fundamentals</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Databases</h3>
-            <ul class="tag-list">
-              <li>SQL</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Tools &amp; Platforms</h3>
-            <ul class="tag-list">
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>MS Word</li>
-              <li>MS Excel</li>
-              <li>MS PowerPoint</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Other</h3>
-            <ul class="tag-list">
-              <li>Technical Documentation</li>
-              <li>Presentation Design</li>
-              <li>Basic IT Troubleshooting</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Soft Skills</h3>
-            <ul class="tag-list">
-              <li>Problem Solving</li>
-              <li>Communication</li>
-              <li>Time Management</li>
-              <li>Adaptability</li>
-              <li>Quick Learner</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <ul class="tag-list">
-              <li>Urdu — Fluent</li>
-              <li>English — Proficient</li>
-              <li>Punjabi — Native</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="section education-section">
-        <h2>Education</h2>
-
-        <ol class="timeline">
-          <li class="timeline-item">
-            <h3>BS Information Technology</h3>
-            <p>
-              University of the Punjab (Affiliated) — 8th Semester, In Progress
-            </p>
-          </li>
-
-          <li class="timeline-item">
-            <h3>Intermediate (F.Sc. Pre-Engineering)</h3>
-            <p>BISE Lahore — Completed</p>
-          </li>
-
-          <li class="timeline-item">
-            <h3>Matriculation (Biology)</h3>
-            <p>BISE Lahore — Completed</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="experience" class="section experience-section">
-        <h2>Experience &amp; Projects</h2>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>ComplaEase</h3>
-            <p class="project-sub">
-              Complaint Management System · Team Project
-            </p>
-            <ul>
-              <li>
-                Built using React.js, Next.js, Tailwind CSS, and MySQL;
-                developed the front-end interface and user-facing features as
-                part of a team.
-              </li>
-              <li>
-                Contributed to an integrated AI-based module within the system
-                to support automated complaint handling.
-              </li>
-              <li>
-                Implemented unique ID generation for tracking and managing
-                individual complaints throughout their lifecycle.
-              </li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h3>Atelier 07 Configurator</h3>
-            <p class="project-sub">Personal Project</p>
-            <ul>
-              <li>
-                Built an interactive 3D product configurator using React.js,
-                Next.js, and Three.js, letting users customize colors,
-                materials, and dimensions in real time.
-              </li>
-              <li>
-                Implemented dynamic state management to update 3D model
-                materials and camera views instantly based on user selections.
-              </li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h3>Ledger &amp; Lens</h3>
-            <p class="project-sub">Personal Project</p>
-            <ul>
-              <li>
-                Developed a personal finance tracking application using
-                React.js, Next.js, and MySQL to record and categorize income and
-                expenses.
-              </li>
-              <li>
-                Built visualization dashboards ("Lens") to help users analyze
-                spending trends and monthly budgets at a glance.
-              </li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h3>Portfolio 3D</h3>
-            <p class="project-sub">Personal Project</p>
-            <ul>
-              <li>
-                Designed and built a personal portfolio website featuring
-                interactive 3D elements and animations using Three.js, React.js,
-                and Tailwind CSS.
-              </li>
-              <li>
-                Showcased projects, skills, and resume in a visually engaging,
-                responsive layout optimized for both desktop and mobile.
-              </li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h3>Academic Foundations</h3>
-            <p class="project-sub">Coursework</p>
-            <ul>
-              <li>
-                Built academic web development projects using HTML, CSS, and
-                basic JavaScript, applying front-end design and coding
-                fundamentals.
-              </li>
-              <li>
-                Practiced database fundamentals and basic SQL querying as part
-                of coursework in database management systems.
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <h2>Contact Me</h2>
-
-        <div class="contact-grid">
-          <div class="contact-details">
-            <p>
-              Lahore, Punjab, Pakistan<br />
-              Email: Available upon request<br />
-              LinkedIn:
-              <a href="https://linkedin.com/in/roha-abid"
-                >linkedin.com/in/roha-abid</a
-              ><br />
-              GitHub:
-              <a href="https://github.com/roha-abid">github.com/roha-abid</a>
-            </p>
-          </div>
-
-          <form action="#" method="post" class="contact-form">
-            <div class="form-row">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div class="form-row">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-row">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2026 Roha Abid. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="scripts/main.js"></script>
+</body>
 </html>
